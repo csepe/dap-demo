@@ -1,336 +1,657 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="menu">
+  <dap-ds-button shape="circle" id="open-menu" onclick="document.querySelector('#menu').open = true">
+    <dap-ds-icon name="menu-line"></dap-ds-icon>
+  </dap-ds-button>
+  <dap-ds-tray id="menu" placement="left">
+    <p>Menü</p>
+    <dap-ds-accordion-group class="collapsed-clean-group">
+      <dap-ds-accordion class="clean-item collapsed-clean-item">
+          <span slot="heading">Komponensek</span>
+          <dap-ds-stack direction="row">
+            <dap-ds-link href="#accordion">Accordion</dap-ds-link>
+          </dap-ds-stack>
+      </dap-ds-accordion>
+  </dap-ds-accordion-group>
+  </dap-ds-tray>
+</div>
 
-<style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
 
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
+<div class="demo-app">
+<dap-ds-typography variant="{{variant}}" class="doc-heading doc-h1">DÁP Design System - Angular demo</dap-ds-typography>
 
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3" id="accordion">Accordion</dap-ds-typography>
+<div>
+  <dap-ds-accordion>
+      <span slot="heading">Small accordion</span>
+      <dap-ds-typography variant="body" size="md">
+          Small Nam ultricies justo magna, id scelerisque mauris.
+      </dap-ds-typography>
+  </dap-ds-accordion>
+  <dap-ds-accordion size="lg" iconLocation="left">
+      <span slot="heading">Large accordion</span>
+      <dap-ds-typography variant="body" size="md">
+          Large Nam ultricies justo magna, id scelerisque mauris tempus.
+      </dap-ds-typography>
+  </dap-ds-accordion>
+</div>
 
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
 
-    --pill-accent: var(--bright-blue);
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Badge</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-badge type="neutral">
+      Neutral Badge
+  </dap-ds-badge>
+  <dap-ds-badge type="brand">
+      Brand Badge
+  </dap-ds-badge>
+  <dap-ds-badge type="info">
+      Info Badge
+  </dap-ds-badge>
+  <dap-ds-badge type="positive">
+      Positive Badge
+  </dap-ds-badge>
+  <dap-ds-badge type="warning">
+      Warning Badge
+  </dap-ds-badge>
+  <dap-ds-badge type="negative">
+      Negative Badge
+  </dap-ds-badge>
+</dap-ds-stack>
 
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Banner</dap-ds-typography>
+<dap-ds-stack>
+  <dap-ds-banner variant="info">
+    INFO Már letölthető az alkalmazás legújabb verziója!
+  </dap-ds-banner>
+  <dap-ds-banner variant="positive" closeable>
+    POSITIVE Már letölthető az alkalmazás legújabb verziója!
+  </dap-ds-banner>
+  <dap-ds-banner variant="warning">
+    WARNING Már letölthető az alkalmazás legújabb verziója!
+  </dap-ds-banner>
+  <dap-ds-banner variant="negative">
+    NEGATIVE Már letölthető az alkalmazás legújabb verziója!
+  </dap-ds-banner>
+  <dap-ds-banner variant="brand">
+    BRAND Már letölthető az alkalmazás legújabb verziója!
+    <dap-ds-link slot="actions" variant="inverted" href="#">Action 1</dap-ds-link>
+  <dap-ds-link variant="inverted" slot="actions" href="#">Action 2</dap-ds-link>
+  </dap-ds-banner>
+</dap-ds-stack>
 
-  h1 {
-    font-size: 3.125rem;
-    color: var(--gray-900);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Breadcrumb</dap-ds-typography>
+<dap-ds-stack>
+  <dap-ds-breadcrumb>
+    <dap-ds-breadcrumb-item href="https://services.gov.hu/design-system/komponensek">
+      Design System
+    </dap-ds-breadcrumb-item>
+    <dap-ds-breadcrumb-item href="https://services.gov.hu/design-system/komponensek/breadcrumb">
+      Breadcrumb
+    </dap-ds-breadcrumb-item>
+    <dap-ds-breadcrumb-item>
+      Current page
+    </dap-ds-breadcrumb-item>
 
-  p {
-    margin: 0;
-    color: var(--gray-700);
-  }
+    <svg
+      slot="separator"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor">
+      <path d="M2 11H4V13H2V11ZM6 11H18V13H6V11ZM20 11H22V13H20V11Z"></path>
+    </svg>
+  </dap-ds-breadcrumb>
 
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
-
-  .angular-logo {
-    max-width: 9.2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-  .content h1 {
-    margin-top: 1.75rem;
-  }
-
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-  }
-
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
-
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--french-violet);
-  }
-  .pill-group .pill:nth-child(6n + 3),
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5) {
-    --pill-accent: var(--hot-red);
-  }
-
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
-</style>
-
-<main class="main">
-  <div class="content">
-    <div class="left-side">
+  <dap-ds-breadcrumb>
+    <dap-ds-breadcrumb-item>First page nohref </dap-ds-breadcrumb-item>
+    <dap-ds-breadcrumb-item href="one">Second page</dap-ds-breadcrumb-item>
+    <dap-ds-breadcrumb-item href="two"
+      >Third page
       <svg
+        slot="separator"
+        width="32"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 982 239"
-        fill="none"
-        class="angular-logo"
-      >
-        <g clip-path="url(#a)">
-          <path
-            fill="url(#b)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-          <path
-            fill="url(#c)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-        </g>
-        <defs>
-          <radialGradient
-            id="c"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientTransform="rotate(118.122 171.182 60.81) scale(205.794)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#FF41F8" />
-            <stop offset=".707" stop-color="#FF41F8" stop-opacity=".5" />
-            <stop offset="1" stop-color="#FF41F8" stop-opacity="0" />
-          </radialGradient>
-          <linearGradient
-            id="b"
-            x1="0"
-            x2="982"
-            y1="192"
-            y2="192"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F0060B" />
-            <stop offset="0" stop-color="#F0070C" />
-            <stop offset=".526" stop-color="#CC26D5" />
-            <stop offset="1" stop-color="#7702FF" />
-          </linearGradient>
-          <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
-        </defs>
+        viewBox="0 0 24 24"
+        fill="currentColor">
+        <path
+          d="M2 11H4V13H2V11ZM6 11H18V13H6V11ZM20 11H22V13H20V11Z"></path>
       </svg>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <div class="pill-group">
-        @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
-          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-        ]; track item.title) {
-          <a
-            class="pill"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>{{ item.title }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="14"
-              viewBox="0 -960 960 960"
-              width="14"
-              fill="currentColor"
-            >
-              <path
-                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-              />
-            </svg>
-          </a>
-        }
-      </div>
-      <div class="social-links">
-        <a
-          href="https://github.com/angular/angular"
-          aria-label="Github"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Github"
-          >
-            <path
-              d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://twitter.com/angular"
-          aria-label="Twitter"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Twitter"
-          >
-            <path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw"
-          aria-label="Youtube"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="29"
-            height="20"
-            viewBox="0 0 29 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Youtube"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
+    </dap-ds-breadcrumb-item>
+    <dap-ds-breadcrumb-item>Current Page</dap-ds-breadcrumb-item>
+  </dap-ds-breadcrumb>
+</dap-ds-stack>
+
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Button</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-button loading>
+    Login
+  </dap-ds-button>
+
+  <dap-ds-button danger>
+    Login
+  </dap-ds-button>
+
+  <dap-ds-button disabled>
+    Login
+  </dap-ds-button>
+</dap-ds-stack>
+
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Calendar</dap-ds-typography>
+<dap-ds-calendar></dap-ds-calendar>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Callout</dap-ds-typography>
+<dap-ds-stack>
+  <dap-ds-callout variant="brand" title="Brand">
+    This component is under contruction. Please check back later.
+  </dap-ds-callout>
+  <dap-ds-callout variant="info" title="Info">
+    This component is under contruction. Please check back later.
+  </dap-ds-callout>
+  <dap-ds-callout variant="positive" title="Positive">
+    This component is under contruction. Please check back later.
+  </dap-ds-callout>
+  <dap-ds-callout variant="warning" title="Warning">
+    This component is under contruction. Please check back later.
+  </dap-ds-callout>
+  <dap-ds-callout variant="negative" title="Negative">
+    This component is under contruction. Please check back later.
+  </dap-ds-callout>
+</dap-ds-stack>
+
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Card</dap-ds-typography>
+<dap-ds-card
+  interactive
+  href="https://www.google.com"
+  target="_blank"
+  style="max-width: 300px; display: block;"
+>
+  <dap-ds-card-image
+    src="https://services.gov.hu/img/components/apples.webp"
+    alt="alma"></dap-ds-card-image>
+  <dap-ds-card-subtitle>Subtitle</dap-ds-card-subtitle>
+  <dap-ds-card-title>Title</dap-ds-card-title>
+  <dap-ds-card-content>
+    Content
+  </dap-ds-card-content>
+  <dap-ds-card-actions>
+    <dap-ds-button>Action 1</dap-ds-button>
+    <dap-ds-button>Action 2</dap-ds-button>
+  </dap-ds-card-actions>
+</dap-ds-card>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Checkbox</dap-ds-typography>
+
+
+<dap-ds-stack direction="column">
+  <dap-ds-checkbox
+    label="Disabled"
+    value="option-1"
+    disabled
+  ></dap-ds-checkbox>
+
+  <dap-ds-checkbox
+    label="Checked"
+    value="option-2"
+    checked
+  ></dap-ds-checkbox>
+
+  <dap-ds-checkbox
+    label="Indeterminate"
+    value="option-3"
+    indeterminate
+  ></dap-ds-checkbox>
+
+  <dap-ds-checkbox
+    label="Invalid"
+    value="option-4"
+    invalid
+    feedback="You have to accept the terms and conditions"
+    feedbackType="negative"
+  ></dap-ds-checkbox>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Combobox</dap-ds-typography>
+<dap-ds-combobox
+  allowManualInput
+  label="Fruits"
+  placeholder="Favorite fruit"
+  description="Select your favorite fruit"
+>
+  <dap-ds-option-item value="alma">Apple</dap-ds-option-item>
+  <dap-ds-option-item value="korte">Pear</dap-ds-option-item>
+  <dap-ds-option-item value="szilva">Plum</dap-ds-option-item>
+  <dap-ds-option-item value="barack">Peach</dap-ds-option-item>
+  <dap-ds-option-item value="szolo">Grape</dap-ds-option-item>
+  <dap-ds-option-item value="meggy">Sour cherry</dap-ds-option-item>
+  <dap-ds-option-item value="cseresznye">Cherry</dap-ds-option-item>
+</dap-ds-combobox>
+
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Content switcher</dap-ds-typography>
+<dap-ds-content-switcher multiSelect value="option1,option2">
+  <dap-ds-content-switcher-item value="option1">Option 1</dap-ds-content-switcher-item>
+  <dap-ds-content-switcher-item value="option2">Option 2</dap-ds-content-switcher-item>
+  <dap-ds-content-switcher-item value="option3">Option 3</dap-ds-content-switcher-item>
+</dap-ds-content-switcher>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Datepicker</dap-ds-typography>
+<div style="display: flex;">
+  <dap-ds-datepicker 
+    label="Birth date"
+    description="Choose your birth date"
+  >
+  </dap-ds-datepicker>
+</div>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Divider</dap-ds-typography>
+<dap-ds-divider spacing="800"></dap-ds-divider>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Feedback message</dap-ds-typography>
+<dap-ds-stack>
+  <dap-ds-feedback type="negative">
+    This is an error message
+  </dap-ds-feedback>
+
+  <dap-ds-feedback type="warning">
+    This is a warning message
+  </dap-ds-feedback>
+
+  <dap-ds-feedback type="positive">
+    This is a success message
+  </dap-ds-feedback>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">File input</dap-ds-typography>
+  <dap-ds-file-input
+    id="fileInput"
+    description="Upload your resume"
+    accept=".jpg,.docx,.png,.heic"
+    label="Auto upload resume"
+    autoupload
+    uploadUrl="https://9daf1d71-c24f-4a02-8861-701f8ff4a9c8.mock.pstmn.io/upload/success"
+    tooltip="File tooltip text">
+  </dap-ds-file-input>
+
+  <dap-ds-file-input-list for="fileInput"></dap-ds-file-input-list>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Icon</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-icon name="arrow-down-line" size="xs" />
+  <dap-ds-icon name="arrow-down-line" size="sm" />
+  <dap-ds-icon name="arrow-down-line" />
+  <dap-ds-icon name="arrow-down-line" size="lg" />
+  <dap-ds-icon name="arrow-down-line" size="xl" />
+  <dap-ds-icon name="arrow-down-line" size="xxl" />
+  <dap-ds-icon name="arrow-down-line" staticSize="70" />
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Icon button</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-icon-button variant="neutral" icon="cookie-line" ariaLabel="Neutral">
+  </dap-ds-icon-button>
+  <dap-ds-icon-button variant="brand" icon="close-line" ariaLabel="Brand">
+  </dap-ds-icon-button>
+  <div>
+    <dap-ds-icon-button variant="inverted" icon="arrow-down-line" ariaLabel="Inverted">
+    </dap-ds-icon-button>
   </div>
-</main>
+  <dap-ds-icon-button variant="inverted-brand" icon="arrow-up-line" ariaLabel="Inverted Brand">
+  </dap-ds-icon-button>
+</dap-ds-stack>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Input</dap-ds-typography>
+<dap-ds-stack direction="column">
+
+  <dap-ds-input
+    label="Loading"
+    loading
+    placeholder="Enter your name"
+  ></dap-ds-input>
+
+  <dap-ds-input
+    label="Success"
+    placeholder="Enter your name"
+    status="success"
+    feedback="Your username is available"
+    feedbackType="positive"
+  ></dap-ds-input>
+
+  <dap-ds-input
+    label="Error"
+    placeholder="Enter your name"
+    status="error"
+    required
+    feedback="Please enter your full name"
+    feedbackType="negative"
+  ></dap-ds-input>
+
+  <dap-ds-input
+    label="Disabled"
+    placeholder="Enter your name"
+    disabled
+  ></dap-ds-input>
+
+  <dap-ds-input
+    label="Readonly"
+    value="John Doe"
+    placeholder="Enter your name"
+    readonly
+  ></dap-ds-input>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Link</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-link variant="brand">Barand Link</dap-ds-link>
+  <dap-ds-link variant="neutral">Neutral Link</dap-ds-link>
+  <div>
+    <dap-ds-link variant="inverted">Inverted Link</dap-ds-link>
+  </div>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">List item</dap-ds-typography>
+<dap-ds-stack>
+  <dap-ds-list-item variant="info" shade="subtle">Background: subtle</dap-ds-list-item>
+  <dap-ds-list-item variant="pass" shade="base">Background: base</dap-ds-list-item>
+  <dap-ds-list-item variant="fail" shade="medium">Background: medium</dap-ds-list-item>
+  <dap-ds-list-item variant="notapplicable" shade="strong">Background: strong</dap-ds-list-item>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Modal</dap-ds-typography>
+<dap-ds-button onclick="document.getElementById('tray-bottom').open = true">Open Modal</dap-ds-button>
+<dap-ds-modal id="tray-bottom">
+  <dap-ds-typography variant="h1" slot="title">Like a tray?</dap-ds-typography>
+  <p>Opened like a tray</p>
+  <dap-ds-button slot="footer" onclick="document.getElementById('tray-bottom').open = false">I like tray</dap-ds-button>
+  <dap-ds-button danger slot="footer" onclick="document.getElementById('tray-bottom').open = false">I don't ike tray</dap-ds-button>
+</dap-ds-modal>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Number input</dap-ds-typography>
+<dap-ds-stack direction="column">
+  <dap-ds-number-input label="Disabled" disabled></dap-ds-number-input>
+  <dap-ds-number-input label="Read only" value="8888" readonly></dap-ds-number-input>
+  <dap-ds-number-input label="Success" status="success"></dap-ds-number-input>
+  <dap-ds-number-input label="Error" status="error" label="Number" required feedback="wrong number" feedbackType="negative"></dap-ds-number-input>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Password input</dap-ds-typography>
+<dap-ds-stack direction="column">
+  <dap-ds-password-input label="Disabled" value="password" disabled></dap-ds-password-input>
+  <dap-ds-password-input label="Success" status="success" value="password"></dap-ds-password-input>
+  <dap-ds-password-input label="Error" status="error" value="password" required feedback="Wrong password" feedbackType="negative"></dap-ds-password-input>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Popup</dap-ds-typography>
+  <dap-ds-stack direction="row">
+    <dap-ds-popup id="top" placement="top">
+      <dap-ds-button slot="trigger" onclick="const popup = document.querySelector('#top'); popup.opened = !popup.opened;">
+        Top
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-popup>
+    <dap-ds-popup id="right" placement="right">
+      <dap-ds-button slot="trigger" onclick="const popup = document.querySelector('#right'); popup.opened = !popup.opened;">
+        Right
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-popup>
+    <dap-ds-popup id="bottom" placement="bottom">
+      <dap-ds-button slot="trigger" onclick="const popup = document.querySelector('#bottom'); popup.opened = !popup.opened;">
+        Bottom
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-popup>
+    <dap-ds-popup id="left" placement="left">
+      <dap-ds-button slot="trigger"onclick="const popup = document.querySelector('#left'); popup.opened = !popup.opened;">
+        Left
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-popup>
+    <dap-ds-popup id="rightstart" placement="right-start">
+      <dap-ds-button slot="trigger"onclick="const popup = document.querySelector('#rightstart'); popup.opened = !popup.opened;">
+        Right-Start
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-popup>
+  </dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Radio button</dap-ds-typography>
+<dap-ds-radio-group
+    label="Radio group"
+    description="Description"
+    required
+    feedback="Please select an option"
+    feedbackType="negative"
+    value="radio-1"
+  >
+    <dap-ds-radio-button
+      label="Option 1"
+      value="radio-1"
+    ></dap-ds-radio-button>
+
+    <dap-ds-radio-button
+      label="Option 2"
+      value="radio-2"
+    ></dap-ds-radio-button>
+  </dap-ds-radio-group>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Search</dap-ds-typography>
+<dap-ds-search
+  searchMode="autocomplete"
+  label="Gyümölcsök"
+  placeholder="Keresés"
+  description="Keresés a gyümölcsök között"
+>
+  <dap-ds-option-item value="alma">Alma</dap-ds-option-item>
+  <dap-ds-option-item value="korte">Körte</dap-ds-option-item>
+  <dap-ds-option-item value="szilva">Szilva</dap-ds-option-item>
+  <dap-ds-option-item value="barack">Barack</dap-ds-option-item>
+  <dap-ds-option-item value="szolo">Szőlő</dap-ds-option-item>
+  <dap-ds-option-item value="meggy">Meggy</dap-ds-option-item>
+  <dap-ds-option-item value="cseresznye">Cseresznye</dap-ds-option-item>
+</dap-ds-search>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Select</dap-ds-typography>
+<dap-ds-select
+  status="error"
+  label="Wrong fruits">
+  <dap-ds-option-item value="item0">
+    Apple
+  </dap-ds-option-item>
+  <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+</dap-ds-select>
+
+<dap-ds-select
+  status="success"
+  label="Good fruits">
+  <dap-ds-option-item value="item0">
+    Apple
+  </dap-ds-option-item>
+  <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+</dap-ds-select>
+
+<dap-ds-select
+  disabled
+  label="Do not select fruits">
+  <dap-ds-option-item value="item0">
+    Apple
+  </dap-ds-option-item>
+  <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+</dap-ds-select>
+
+<dap-ds-select
+  loading
+  label="Fruits are loading">
+  <dap-ds-option-item value="item0">
+    Apple
+  </dap-ds-option-item>
+  <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+</dap-ds-select>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Spinner</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-spinner size="xs"></dap-ds-spinner>
+  <dap-ds-spinner size="sm"></dap-ds-spinner>
+  <dap-ds-spinner size="md"></dap-ds-spinner>
+  <dap-ds-spinner size="lg"></dap-ds-spinner>
+  <dap-ds-spinner size="xl"></dap-ds-spinner>
+  <dap-ds-spinner size="xxl"></dap-ds-spinner>
+  <dap-ds-spinner staticSize="70"></dap-ds-spinner>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Switch</dap-ds-typography>
+<dap-ds-input-group
+      required
+      label="Switch Group"
+      description="Switch group description"
+      tooltip="Tooltip"
+      status="error"
+      feedback="Invalid switch"
+      feedbackType="negative">
+      <dap-ds-switch
+        label="Label 1"
+        description="Secondary label"></dap-ds-switch>
+      <dap-ds-switch label="Label 2" checked></dap-ds-switch>
+      <dap-ds-switch label="Label 3"></dap-ds-switch>
+    </dap-ds-input-group>
 
 
-<router-outlet />
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Tab</dap-ds-typography>
+<dap-ds-tab-group>
+  <dap-ds-tab tabId="first">
+    <dap-ds-stack direction="row">
+      <dap-ds-icon name="home-6-line"></dap-ds-icon>
+      Home
+    </dap-ds-stack>
+    <div slot="content">
+      Content 1
+    </div>
+  </dap-ds-tab>
+  <dap-ds-tab tabId="Second">
+    Tab 2
+    <div slot="content">
+      Content 2
+    </div>
+  </dap-ds-tab>
+  <dap-ds-tab tabId="Third" disabled>
+    Tab 3
+    <div slot="content">
+      Content 3
+    </div>
+  </dap-ds-tab>
+</dap-ds-tab-group>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Table</dap-ds-typography>
+<dap-ds-table>
+  <dap-ds-table-row>
+      <dap-ds-table-header>Date</dap-ds-table-header>
+      <dap-ds-table-header>Event</dap-ds-table-header>
+      <dap-ds-table-header>Venue</dap-ds-table-header>
+  </dap-ds-table-row>
+  <dap-ds-table-row>
+      <dap-ds-table-cell>12 February</dap-ds-table-cell>
+      <dap-ds-table-cell>The Obelisks</dap-ds-table-cell>
+      <dap-ds-table-cell>Main Hall</dap-ds-table-cell>
+  </dap-ds-table-row>
+  <dap-ds-table-row>
+      <dap-ds-table-cell>24 March</dap-ds-table-cell>
+      <dap-ds-table-cell>Waltz with Strauss</dap-ds-table-cell>
+      <dap-ds-table-cell>West Wing</dap-ds-table-cell>
+  </dap-ds-table-row>
+  <dap-ds-table-row>
+      <dap-ds-table-cell>24 March</dap-ds-table-cell>
+      <dap-ds-table-cell>The What</dap-ds-table-cell>
+      <dap-ds-table-cell>Main Hall</dap-ds-table-cell>
+  </dap-ds-table-row>
+</dap-ds-table>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Textarea</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-textarea disabled label="Message" placeholder="Disabled"></dap-ds-textarea>
+  <dap-ds-textarea readonly value="Readonly" label="Message" placeholder="Read only"></dap-ds-textarea>
+  <dap-ds-textarea status="success" label="Message" placeholder="Success"></dap-ds-textarea>
+  <dap-ds-textarea status="error" label="Message" placeholder="Error"
+    feedback="This is an error message"
+    feedbackType="negative"
+  ></dap-ds-textarea>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Tooltip</dap-ds-typography>
+  <dap-ds-stack direction="row">
+    <dap-ds-tooltip placement="top">
+      <dap-ds-button slot="trigger">
+        Top
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-tooltip>
+    <dap-ds-tooltip placement="right">
+      <dap-ds-button slot="trigger">
+        Right
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-tooltip>
+    <dap-ds-tooltip placement="bottom">
+      <dap-ds-button slot="trigger">
+        Bottom
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-tooltip>
+    <dap-ds-tooltip placement="left">
+      <dap-ds-button slot="trigger">
+        Left
+      </dap-ds-button>
+      Tooltip content
+    </dap-ds-tooltip>
+  </dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Tray</dap-ds-typography>
+<dap-ds-stack direction="row">
+  <dap-ds-button id="open-tray1" onclick="document.querySelector('#bottom1').open = true">
+    Open bottom
+  </dap-ds-button>
+
+  <dap-ds-tray id="bottom1" placement="bottom">
+    <p>Tray content</p>
+  </dap-ds-tray>
+
+  <dap-ds-button id="open-tray2" onclick="document.querySelector('#left1').open = true">
+    Open left
+  </dap-ds-button>
+
+  <dap-ds-tray id="left1"  placement="left">
+    <p>Tray content</p>
+  </dap-ds-tray>
+
+  <dap-ds-button id="open-tray3" onclick="document.querySelector('#right1').open = true">
+    Open right
+  </dap-ds-button>
+
+  <dap-ds-tray id="right1" placement="right">
+    <p>Tray content</p>
+  </dap-ds-tray>
+
+  <dap-ds-button id="open-tray4" onclick="document.querySelector('#top1').open = true">
+    Open top
+  </dap-ds-button>
+
+  <dap-ds-tray id="top1"  placement="top">
+    <p>Tray content</p>
+  </dap-ds-tray>
+</dap-ds-stack>
+
+<dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Typography</dap-ds-typography>
+<dap-ds-stack>
+  <dap-ds-typography variant="h1">Heading 1</dap-ds-typography>
+   <dap-ds-typography variant="h2">Heading 2</dap-ds-typography>
+   <dap-ds-typography variant="h3">Heading 3</dap-ds-typography>
+   <dap-ds-typography variant="h4">Heading 4</dap-ds-typography>
+   <dap-ds-typography variant="h5">Heading 5</dap-ds-typography>
+   <dap-ds-typography variant="h6">Heading 6</dap-ds-typography>
+ </dap-ds-stack>
+
+
+
+
+</div>
