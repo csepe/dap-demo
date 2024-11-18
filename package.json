@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "nvm use v22.11.0 && ng serve",
-    "build": "nvm use v22.11.0 && ng build --output-path docs --base-href /dap-demo/",
+    "build": "nvm use v22.11.0 && ng build --configuration production --base-href /dap-demo/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
