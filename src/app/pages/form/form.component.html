@@ -1,0 +1,126 @@
+<div>
+    <dap-ds-typography variant="h2" class="doc-heading doc-h1">DAP - Reactive form</dap-ds-typography>
+    <form [formGroup]="form">
+        <dap-ds-stack direction="column">
+            
+            <dap-ds-input
+                formControlName="name"
+                ngDefaultControl
+                name="text-input"
+                required
+                label="Name"
+                helperText="Validate for required"
+                tooltip="Tooltip content"
+                [attr.feedback]="isInputValid('name') ? null : 'Please provide a name.'"
+                [attr.status]="isInputValid('name') ? 'success' : 'error'"
+                placeholder="Enter your first name"
+                [attr.feedbackType]="isInputValid('name') ? '' : 'negative'">
+            </dap-ds-input>
+
+            <dap-ds-datepicker 
+                label="Birth date"
+                description="Choose your birth date"
+                (dds-change)="setFormValue('birthdate', $event);"
+                ngDefaultControl
+                required
+                formControlName="birthdate"
+                [attr.feedback]="isInputValid('birthdate') ? null : 'Please provide a date.'"
+                [attr.status]="isInputValid('birthdate') ? 'success' : 'error'"
+                [attr.feedbackType]="isInputValid('birthdate') ? '' : 'negative'">
+            </dap-ds-datepicker>
+
+            <dap-ds-input
+                formControlName="email"
+                ngDefaultControl
+                name="text-input"
+                label="Email"
+                helperText="Validate for required"
+                tooltip="Tooltip content"
+                [attr.feedback]="isInputValid('email') ? null : 'Please provide a valid email.'"
+                [attr.status]="isInputValid('email') ? 'success' : 'error'"
+                placeholder="Enter your first email"
+                [attr.feedbackType]="isInputValid('email') ? '' : 'negative'">
+            </dap-ds-input>
+
+            <dap-ds-combobox 
+                ngDefaultControl
+                formControlName="type"
+                label="Type"
+                openOnEmpty="true"
+                placeholder="Select type"
+                (dds-change)="setFormValue('type', $event);"
+                description="Select your favorite type">
+                <dap-ds-option-item value="alma">Apple</dap-ds-option-item>
+                <dap-ds-option-item value="korte">Pear</dap-ds-option-item>
+            </dap-ds-combobox>
+
+            <dap-ds-textarea
+                formControlName="message"
+                ngDefaultControl
+                name="text-input"
+                required
+                label="Message"
+                helperText="Validate for required"
+                tooltip="Tooltip content"
+                [attr.feedback]="isInputValid('message') ? null : 'Messages must be at least 15 characters long.'"
+                [attr.status]="isInputValid('message') ? 'success' : 'error'"
+                placeholder="Enter your message"
+                [attr.feedbackType]="isInputValid('message') ? '' : 'negative'">
+            </dap-ds-textarea>
+
+            <dap-ds-radio-group
+                formControlName="radio"
+                ngDefaultControl
+                label="Options"
+                value="radio-2"
+                (dds-change)="setFormValue('radio', $event);"
+            >
+                <dap-ds-radio-button
+                label="Option 1"
+                value="radio-1"
+                ></dap-ds-radio-button>
+
+                <dap-ds-radio-button
+                label="Option 2"
+                value="radio-2"
+                ></dap-ds-radio-button>
+            </dap-ds-radio-group>
+
+            <dap-ds-checkbox
+                formControlName="accepted"
+                ngDefaultControl
+                label="Accepted"
+                value="false"
+                required
+                [attr.checked]="formInitialValues.accepted"
+                (dds-change)="setFormValue('accepted', $event);"
+                [attr.invalid]="isInputValid('accepted') ? null : true"
+                [attr.feedback]="isInputValid('accepted') ? null : 'You have to accept.'"
+                [attr.feedbackType]="isInputValid('accepted') ? '' : 'negative'"
+            ></dap-ds-checkbox>
+
+            <dap-ds-stack direction="row">
+                <dap-ds-button 
+                (click)="submitForm(form);" 
+                onclick="document.getElementById('tray-bottom').open = true"
+                [disabled]="form.invalid">
+                    Send
+                </dap-ds-button>
+
+                <dap-ds-button 
+                (click)="resetForm()" 
+                [disabled]="form.pristine">
+                    Reset
+                </dap-ds-button>
+            </dap-ds-stack>
+
+            <pre>{{this.form.value | json}}</pre>
+
+            <dap-ds-modal id="tray-bottom">
+                <dap-ds-typography variant="h1" slot="title">Form sent succesful</dap-ds-typography>
+                <dap-ds-button slot="footer" onclick="document.getElementById('tray-bottom').open = false">Ok</dap-ds-button>
+            </dap-ds-modal>
+
+        </dap-ds-stack>
+    </form>
+</div>

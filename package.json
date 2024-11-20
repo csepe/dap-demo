@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "nvm use v22.11.0 && ng serve",
+    "start": "nvm use v22.11.0 && ng serve -o",
     "build": "nvm use v22.11.0 && ng build --configuration production --base-href /dap-demo/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

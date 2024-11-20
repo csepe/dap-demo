@@ -1,9 +1,39 @@
-.demo-app {
+.app {
     width: 100%;
     max-width: 100%;
     padding: 20px 10%;
 }
 
-.menu {
-    padding: 20px 10%;
+.header {
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--header-height-base);
+    padding-inline: var(--dds-spacing-400);
+    border-bottom: var(--dds-border-width-base) solid var(--dds-border-neutral-divider);
+    background: var(--dds-background-neutral-subtle);
+    z-index: 10;
+    padding-block: var(--dds-spacing-400);
+
+    &__title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: var(--dds-spacing-200);
+        column-gap: var(--dds-spacing-200);
+        color: var(--dds-background-brand-base-inverted);
+        font-weight: var(--dds-font-weight-bold);
+        letter-spacing: -0.015rem;
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        transition: all 0.1s ease-in-out;
+        color: var(--dds-background-brand-base-inverted);
+        font-weight: var(--dds-font-weight-bold);
+    }
 }

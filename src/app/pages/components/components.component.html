@@ -1,0 +1,640 @@
+
+<div class="demo-app">
+    <dap-ds-typography variant="{{variant}}" class="doc-heading doc-h1">DAP - Components list</dap-ds-typography>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3" id="accordion">Accordion</dap-ds-typography>
+    <div>
+      <dap-ds-accordion>
+          <span slot="heading">Small accordion</span>
+          <dap-ds-typography variant="body" size="md">
+              Small Nam ultricies justo magna, id scelerisque mauris.
+          </dap-ds-typography>
+      </dap-ds-accordion>
+      <dap-ds-accordion size="lg" iconLocation="left">
+          <span slot="heading">Large accordion</span>
+          <dap-ds-typography variant="body" size="md">
+              Large Nam ultricies justo magna, id scelerisque mauris tempus.
+          </dap-ds-typography>
+      </dap-ds-accordion>
+    </div>
+    
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Badge</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-badge type="neutral">
+          Neutral Badge
+      </dap-ds-badge>
+      <dap-ds-badge type="brand">
+          Brand Badge
+      </dap-ds-badge>
+      <dap-ds-badge type="info">
+          Info Badge
+      </dap-ds-badge>
+      <dap-ds-badge type="positive">
+          Positive Badge
+      </dap-ds-badge>
+      <dap-ds-badge type="warning">
+          Warning Badge
+      </dap-ds-badge>
+      <dap-ds-badge type="negative">
+          Negative Badge
+      </dap-ds-badge>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Banner</dap-ds-typography>
+    <dap-ds-stack>
+      <dap-ds-banner variant="info">
+        INFO Már letölthető az alkalmazás legújabb verziója!
+      </dap-ds-banner>
+      <dap-ds-banner variant="positive" closeable>
+        POSITIVE Már letölthető az alkalmazás legújabb verziója!
+      </dap-ds-banner>
+      <dap-ds-banner variant="warning">
+        WARNING Már letölthető az alkalmazás legújabb verziója!
+      </dap-ds-banner>
+      <dap-ds-banner variant="negative">
+        NEGATIVE Már letölthető az alkalmazás legújabb verziója!
+      </dap-ds-banner>
+      <dap-ds-banner variant="brand">
+        BRAND Már letölthető az alkalmazás legújabb verziója!
+        <dap-ds-link slot="actions" variant="inverted" href="#">Action 1</dap-ds-link>
+      <dap-ds-link variant="inverted" slot="actions" href="#">Action 2</dap-ds-link>
+      </dap-ds-banner>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Breadcrumb</dap-ds-typography>
+    <dap-ds-stack>
+      <dap-ds-breadcrumb>
+        <dap-ds-breadcrumb-item href="https://services.gov.hu/design-system/komponensek">
+          Design System
+        </dap-ds-breadcrumb-item>
+        <dap-ds-breadcrumb-item href="https://services.gov.hu/design-system/komponensek/breadcrumb">
+          Breadcrumb
+        </dap-ds-breadcrumb-item>
+        <dap-ds-breadcrumb-item>
+          Current page
+        </dap-ds-breadcrumb-item>
+    
+        <svg
+          slot="separator"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path d="M2 11H4V13H2V11ZM6 11H18V13H6V11ZM20 11H22V13H20V11Z"></path>
+        </svg>
+      </dap-ds-breadcrumb>
+    
+      <dap-ds-breadcrumb>
+        <dap-ds-breadcrumb-item>First page nohref </dap-ds-breadcrumb-item>
+        <dap-ds-breadcrumb-item href="one">Second page</dap-ds-breadcrumb-item>
+        <dap-ds-breadcrumb-item href="two"
+          >Third page
+          <svg
+            slot="separator"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+              d="M2 11H4V13H2V11ZM6 11H18V13H6V11ZM20 11H22V13H20V11Z"></path>
+          </svg>
+        </dap-ds-breadcrumb-item>
+        <dap-ds-breadcrumb-item>Current Page</dap-ds-breadcrumb-item>
+      </dap-ds-breadcrumb>
+    </dap-ds-stack>
+    
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Button</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-button loading>
+        Login
+      </dap-ds-button>
+    
+      <dap-ds-button danger>
+        Login
+      </dap-ds-button>
+    
+      <dap-ds-button disabled>
+        Login
+      </dap-ds-button>
+    </dap-ds-stack>
+    
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Calendar</dap-ds-typography>
+    <dap-ds-calendar></dap-ds-calendar>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Callout</dap-ds-typography>
+    <dap-ds-stack>
+      <dap-ds-callout variant="brand" title="Brand">
+        This component is under contruction. Please check back later.
+      </dap-ds-callout>
+      <dap-ds-callout variant="info" title="Info">
+        This component is under contruction. Please check back later.
+      </dap-ds-callout>
+      <dap-ds-callout variant="positive" title="Positive">
+        This component is under contruction. Please check back later.
+      </dap-ds-callout>
+      <dap-ds-callout variant="warning" title="Warning">
+        This component is under contruction. Please check back later.
+      </dap-ds-callout>
+      <dap-ds-callout variant="negative" title="Negative">
+        This component is under contruction. Please check back later.
+      </dap-ds-callout>
+    </dap-ds-stack>
+    
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Card</dap-ds-typography>
+    <dap-ds-card
+      interactive
+      href="https://www.google.com"
+      target="_blank"
+      style="max-width: 300px; display: block;"
+    >
+      <dap-ds-card-image
+        src="https://services.gov.hu/img/components/apples.webp"
+        alt="alma"></dap-ds-card-image>
+      <dap-ds-card-subtitle>Subtitle</dap-ds-card-subtitle>
+      <dap-ds-card-title>Title</dap-ds-card-title>
+      <dap-ds-card-content>
+        Content
+      </dap-ds-card-content>
+      <dap-ds-card-actions>
+        <dap-ds-button>Action 1</dap-ds-button>
+        <dap-ds-button>Action 2</dap-ds-button>
+      </dap-ds-card-actions>
+    </dap-ds-card>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Checkbox</dap-ds-typography>
+    
+    
+    <dap-ds-stack direction="column">
+      <dap-ds-checkbox
+        label="Disabled"
+        value="option-1"
+        disabled
+      ></dap-ds-checkbox>
+    
+      <dap-ds-checkbox
+        label="Checked"
+        value="option-2"
+        checked
+      ></dap-ds-checkbox>
+    
+      <dap-ds-checkbox
+        label="Indeterminate"
+        value="option-3"
+        indeterminate
+      ></dap-ds-checkbox>
+    
+      <dap-ds-checkbox
+        label="Invalid"
+        value="option-4"
+        invalid
+        feedback="You have to accept the terms and conditions"
+        feedbackType="negative"
+      ></dap-ds-checkbox>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Combobox</dap-ds-typography>
+    <dap-ds-combobox
+      allowManualInput
+      label="Fruits"
+      placeholder="Favorite fruit"
+      description="Select your favorite fruit"
+    >
+      <dap-ds-option-item value="alma">Apple</dap-ds-option-item>
+      <dap-ds-option-item value="korte">Pear</dap-ds-option-item>
+      <dap-ds-option-item value="szilva">Plum</dap-ds-option-item>
+      <dap-ds-option-item value="barack">Peach</dap-ds-option-item>
+      <dap-ds-option-item value="szolo">Grape</dap-ds-option-item>
+      <dap-ds-option-item value="meggy">Sour cherry</dap-ds-option-item>
+      <dap-ds-option-item value="cseresznye">Cherry</dap-ds-option-item>
+    </dap-ds-combobox>
+    
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Content switcher</dap-ds-typography>
+    <dap-ds-content-switcher multiSelect value="option1,option2">
+      <dap-ds-content-switcher-item value="option1">Option 1</dap-ds-content-switcher-item>
+      <dap-ds-content-switcher-item value="option2">Option 2</dap-ds-content-switcher-item>
+      <dap-ds-content-switcher-item value="option3">Option 3</dap-ds-content-switcher-item>
+    </dap-ds-content-switcher>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Datepicker</dap-ds-typography>
+    <div style="display: flex;">
+      <dap-ds-datepicker 
+        label="Birth date"
+        description="Choose your birth date"
+      >
+      </dap-ds-datepicker>
+    </div>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Divider</dap-ds-typography>
+    <dap-ds-divider spacing="800"></dap-ds-divider>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Feedback message</dap-ds-typography>
+    <dap-ds-stack>
+      <dap-ds-feedback type="negative">
+        This is an error message
+      </dap-ds-feedback>
+    
+      <dap-ds-feedback type="warning">
+        This is a warning message
+      </dap-ds-feedback>
+    
+      <dap-ds-feedback type="positive">
+        This is a success message
+      </dap-ds-feedback>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">File input</dap-ds-typography>
+      <dap-ds-file-input
+        id="fileInput"
+        description="Upload your resume"
+        accept=".jpg,.docx,.png,.heic"
+        label="Auto upload resume"
+        autoupload
+        uploadUrl="https://9daf1d71-c24f-4a02-8861-701f8ff4a9c8.mock.pstmn.io/upload/success"
+        tooltip="File tooltip text">
+      </dap-ds-file-input>
+    
+      <dap-ds-file-input-list for="fileInput"></dap-ds-file-input-list>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Icon</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-icon name="arrow-down-line" size="xs" />
+      <dap-ds-icon name="arrow-down-line" size="sm" />
+      <dap-ds-icon name="arrow-down-line" />
+      <dap-ds-icon name="arrow-down-line" size="lg" />
+      <dap-ds-icon name="arrow-down-line" size="xl" />
+      <dap-ds-icon name="arrow-down-line" size="xxl" />
+      <dap-ds-icon name="arrow-down-line" staticSize="70" />
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Icon button</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-icon-button variant="neutral" icon="cookie-line" ariaLabel="Neutral">
+      </dap-ds-icon-button>
+      <dap-ds-icon-button variant="brand" icon="close-line" ariaLabel="Brand">
+      </dap-ds-icon-button>
+      <div>
+        <dap-ds-icon-button variant="inverted" icon="arrow-down-line" ariaLabel="Inverted">
+        </dap-ds-icon-button>
+      </div>
+      <dap-ds-icon-button variant="inverted-brand" icon="arrow-up-line" ariaLabel="Inverted Brand">
+      </dap-ds-icon-button>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Input</dap-ds-typography>
+    <dap-ds-stack direction="column">
+    
+      <dap-ds-input
+        label="Loading"
+        loading
+        placeholder="Enter your name"
+      ></dap-ds-input>
+    
+      <dap-ds-input
+        label="Success"
+        placeholder="Enter your name"
+        status="success"
+        feedback="Your username is available"
+        feedbackType="positive"
+      ></dap-ds-input>
+    
+      <dap-ds-input
+        label="Error"
+        placeholder="Enter your name"
+        status="error"
+        required
+        feedback="Please enter your full name"
+        feedbackType="negative"
+      ></dap-ds-input>
+    
+      <dap-ds-input
+        label="Disabled"
+        placeholder="Enter your name"
+        disabled
+      ></dap-ds-input>
+    
+      <dap-ds-input
+        label="Readonly"
+        value="John Doe"
+        placeholder="Enter your name"
+        readonly
+      ></dap-ds-input>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Link</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-link variant="brand">Barand Link</dap-ds-link>
+      <dap-ds-link variant="neutral">Neutral Link</dap-ds-link>
+      <div>
+        <dap-ds-link variant="inverted">Inverted Link</dap-ds-link>
+      </div>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">List item</dap-ds-typography>
+    <dap-ds-stack>
+      <dap-ds-list-item variant="info" shade="subtle">Background: subtle</dap-ds-list-item>
+      <dap-ds-list-item variant="pass" shade="base">Background: base</dap-ds-list-item>
+      <dap-ds-list-item variant="fail" shade="medium">Background: medium</dap-ds-list-item>
+      <dap-ds-list-item variant="notapplicable" shade="strong">Background: strong</dap-ds-list-item>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Modal</dap-ds-typography>
+    <dap-ds-button onclick="document.getElementById('tray-bottom').open = true">Open Modal</dap-ds-button>
+    <dap-ds-modal id="tray-bottom">
+      <dap-ds-typography variant="h1" slot="title">Like a tray?</dap-ds-typography>
+      <p>Opened like a tray</p>
+      <dap-ds-button slot="footer" onclick="document.getElementById('tray-bottom').open = false">I like tray</dap-ds-button>
+      <dap-ds-button danger slot="footer" onclick="document.getElementById('tray-bottom').open = false">I don't ike tray</dap-ds-button>
+    </dap-ds-modal>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Number input</dap-ds-typography>
+    <dap-ds-stack direction="column">
+      <dap-ds-number-input label="Disabled" disabled></dap-ds-number-input>
+      <dap-ds-number-input label="Read only" value="8888" readonly></dap-ds-number-input>
+      <dap-ds-number-input label="Success" status="success"></dap-ds-number-input>
+      <dap-ds-number-input label="Error" status="error" label="Number" required feedback="wrong number" feedbackType="negative"></dap-ds-number-input>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Password input</dap-ds-typography>
+    <dap-ds-stack direction="column">
+      <dap-ds-password-input label="Disabled" value="password" disabled></dap-ds-password-input>
+      <dap-ds-password-input label="Success" status="success" value="password"></dap-ds-password-input>
+      <dap-ds-password-input label="Error" status="error" value="password" required feedback="Wrong password" feedbackType="negative"></dap-ds-password-input>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Popup</dap-ds-typography>
+      <dap-ds-stack direction="row">
+        <dap-ds-popup id="top" placement="top">
+          <dap-ds-button slot="trigger" onclick="const popup = document.querySelector('#top'); popup.opened = !popup.opened;">
+            Top
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-popup>
+        <dap-ds-popup id="right" placement="right">
+          <dap-ds-button slot="trigger" onclick="const popup = document.querySelector('#right'); popup.opened = !popup.opened;">
+            Right
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-popup>
+        <dap-ds-popup id="bottom" placement="bottom">
+          <dap-ds-button slot="trigger" onclick="const popup = document.querySelector('#bottom'); popup.opened = !popup.opened;">
+            Bottom
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-popup>
+        <dap-ds-popup id="left" placement="left">
+          <dap-ds-button slot="trigger"onclick="const popup = document.querySelector('#left'); popup.opened = !popup.opened;">
+            Left
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-popup>
+        <dap-ds-popup id="rightstart" placement="right-start">
+          <dap-ds-button slot="trigger"onclick="const popup = document.querySelector('#rightstart'); popup.opened = !popup.opened;">
+            Right-Start
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-popup>
+      </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Radio button</dap-ds-typography>
+    <dap-ds-radio-group
+        label="Radio group"
+        description="Description"
+        required
+        feedback="Please select an option"
+        feedbackType="negative"
+        value="radio-1"
+      >
+        <dap-ds-radio-button
+          label="Option 1"
+          value="radio-1"
+        ></dap-ds-radio-button>
+    
+        <dap-ds-radio-button
+          label="Option 2"
+          value="radio-2"
+        ></dap-ds-radio-button>
+      </dap-ds-radio-group>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Search</dap-ds-typography>
+    <dap-ds-search
+      searchMode="autocomplete"
+      label="Gyümölcsök"
+      placeholder="Keresés"
+      description="Keresés a gyümölcsök között"
+    >
+      <dap-ds-option-item value="alma">Alma</dap-ds-option-item>
+      <dap-ds-option-item value="korte">Körte</dap-ds-option-item>
+      <dap-ds-option-item value="szilva">Szilva</dap-ds-option-item>
+      <dap-ds-option-item value="barack">Barack</dap-ds-option-item>
+      <dap-ds-option-item value="szolo">Szőlő</dap-ds-option-item>
+      <dap-ds-option-item value="meggy">Meggy</dap-ds-option-item>
+      <dap-ds-option-item value="cseresznye">Cseresznye</dap-ds-option-item>
+    </dap-ds-search>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Select</dap-ds-typography>
+    <dap-ds-select
+      status="error"
+      label="Wrong fruits">
+      <dap-ds-option-item value="item0">
+        Apple
+      </dap-ds-option-item>
+      <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+    </dap-ds-select>
+    
+    <dap-ds-select
+      status="success"
+      label="Good fruits">
+      <dap-ds-option-item value="item0">
+        Apple
+      </dap-ds-option-item>
+      <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+    </dap-ds-select>
+    
+    <dap-ds-select
+      disabled
+      label="Do not select fruits">
+      <dap-ds-option-item value="item0">
+        Apple
+      </dap-ds-option-item>
+      <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+    </dap-ds-select>
+    
+    <dap-ds-select
+      loading
+      label="Fruits are loading">
+      <dap-ds-option-item value="item0">
+        Apple
+      </dap-ds-option-item>
+      <dap-ds-option-item value="item1">Pear</dap-ds-option-item>
+    </dap-ds-select>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Spinner</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-spinner size="xs"></dap-ds-spinner>
+      <dap-ds-spinner size="sm"></dap-ds-spinner>
+      <dap-ds-spinner size="md"></dap-ds-spinner>
+      <dap-ds-spinner size="lg"></dap-ds-spinner>
+      <dap-ds-spinner size="xl"></dap-ds-spinner>
+      <dap-ds-spinner size="xxl"></dap-ds-spinner>
+      <dap-ds-spinner staticSize="70"></dap-ds-spinner>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Switch</dap-ds-typography>
+    <dap-ds-input-group
+          required
+          label="Switch Group"
+          description="Switch group description"
+          tooltip="Tooltip"
+          status="error"
+          feedback="Invalid switch"
+          feedbackType="negative">
+          <dap-ds-switch
+            label="Label 1"
+            description="Secondary label"></dap-ds-switch>
+          <dap-ds-switch label="Label 2" checked></dap-ds-switch>
+          <dap-ds-switch label="Label 3"></dap-ds-switch>
+        </dap-ds-input-group>
+    
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Tab</dap-ds-typography>
+    <dap-ds-tab-group>
+      <dap-ds-tab tabId="first">
+        <dap-ds-stack direction="row">
+          <dap-ds-icon name="home-6-line"></dap-ds-icon>
+          Home
+        </dap-ds-stack>
+        <div slot="content">
+          Content 1
+        </div>
+      </dap-ds-tab>
+      <dap-ds-tab tabId="Second">
+        Tab 2
+        <div slot="content">
+          Content 2
+        </div>
+      </dap-ds-tab>
+      <dap-ds-tab tabId="Third" disabled>
+        Tab 3
+        <div slot="content">
+          Content 3
+        </div>
+      </dap-ds-tab>
+    </dap-ds-tab-group>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Table</dap-ds-typography>
+    <dap-ds-table>
+      <dap-ds-table-row>
+          <dap-ds-table-header>Date</dap-ds-table-header>
+          <dap-ds-table-header>Event</dap-ds-table-header>
+          <dap-ds-table-header>Venue</dap-ds-table-header>
+      </dap-ds-table-row>
+      <dap-ds-table-row>
+          <dap-ds-table-cell>12 February</dap-ds-table-cell>
+          <dap-ds-table-cell>The Obelisks</dap-ds-table-cell>
+          <dap-ds-table-cell>Main Hall</dap-ds-table-cell>
+      </dap-ds-table-row>
+      <dap-ds-table-row>
+          <dap-ds-table-cell>24 March</dap-ds-table-cell>
+          <dap-ds-table-cell>Waltz with Strauss</dap-ds-table-cell>
+          <dap-ds-table-cell>West Wing</dap-ds-table-cell>
+      </dap-ds-table-row>
+      <dap-ds-table-row>
+          <dap-ds-table-cell>24 March</dap-ds-table-cell>
+          <dap-ds-table-cell>The What</dap-ds-table-cell>
+          <dap-ds-table-cell>Main Hall</dap-ds-table-cell>
+      </dap-ds-table-row>
+    </dap-ds-table>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Textarea</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-textarea disabled label="Message" placeholder="Disabled"></dap-ds-textarea>
+      <dap-ds-textarea readonly value="Readonly" label="Message" placeholder="Read only"></dap-ds-textarea>
+      <dap-ds-textarea status="success" label="Message" placeholder="Success"></dap-ds-textarea>
+      <dap-ds-textarea status="error" label="Message" placeholder="Error"
+        feedback="This is an error message"
+        feedbackType="negative"
+      ></dap-ds-textarea>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Tooltip</dap-ds-typography>
+      <dap-ds-stack direction="row">
+        <dap-ds-tooltip placement="top">
+          <dap-ds-button slot="trigger">
+            Top
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-tooltip>
+        <dap-ds-tooltip placement="right">
+          <dap-ds-button slot="trigger">
+            Right
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-tooltip>
+        <dap-ds-tooltip placement="bottom">
+          <dap-ds-button slot="trigger">
+            Bottom
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-tooltip>
+        <dap-ds-tooltip placement="left">
+          <dap-ds-button slot="trigger">
+            Left
+          </dap-ds-button>
+          Tooltip content
+        </dap-ds-tooltip>
+      </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Tray</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-button id="open-tray1" onclick="document.querySelector('#bottom1').open = true">
+        Open bottom
+      </dap-ds-button>
+    
+      <dap-ds-tray id="bottom1" placement="bottom">
+        <p>Tray content</p>
+      </dap-ds-tray>
+    
+      <dap-ds-button id="open-tray2" onclick="document.querySelector('#left1').open = true">
+        Open left
+      </dap-ds-button>
+    
+      <dap-ds-tray id="left1"  placement="left">
+        <p>Tray content</p>
+      </dap-ds-tray>
+    
+      <dap-ds-button id="open-tray3" onclick="document.querySelector('#right1').open = true">
+        Open right
+      </dap-ds-button>
+    
+      <dap-ds-tray id="right1" placement="right">
+        <p>Tray content</p>
+      </dap-ds-tray>
+    
+      <dap-ds-button id="open-tray4" onclick="document.querySelector('#top1').open = true">
+        Open top
+      </dap-ds-button>
+    
+      <dap-ds-tray id="top1"  placement="top">
+        <p>Tray content</p>
+      </dap-ds-tray>
+    </dap-ds-stack>
+    
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Typography</dap-ds-typography>
+    <dap-ds-stack>
+      <dap-ds-typography variant="h1">Heading 1</dap-ds-typography>
+       <dap-ds-typography variant="h2">Heading 2</dap-ds-typography>
+       <dap-ds-typography variant="h3">Heading 3</dap-ds-typography>
+       <dap-ds-typography variant="h4">Heading 4</dap-ds-typography>
+       <dap-ds-typography variant="h5">Heading 5</dap-ds-typography>
+       <dap-ds-typography variant="h6">Heading 6</dap-ds-typography>
+     </dap-ds-stack>
+    
+    
+    
+    
+    </div>
