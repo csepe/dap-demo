@@ -36,7 +36,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "dap-design-system/dist/light.theme.css"
+              "dap-design-system/dist/light.theme.css",
+              "dap-design-system/dist/dark.theme.css",
+              "dap-design-system/dist/high-contrast.theme.css"
             ],
             "scripts": []
           },

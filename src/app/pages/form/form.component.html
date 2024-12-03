@@ -1,4 +1,5 @@
-<div>
+<dap-ds-card>
+    <dap-ds-card-content>
     <dap-ds-typography variant="h2" class="doc-heading doc-h1">DAP - Reactive form</dap-ds-typography>
     <form [formGroup]="form">
         <dap-ds-stack direction="column">
@@ -114,7 +115,9 @@
                 </dap-ds-button>
             </dap-ds-stack>
 
-            <pre>{{this.form.value | json}}</pre>
+            <dap-ds-typography variant="body" bodyAs="pre">
+                {{this.form.value | json}}
+            </dap-ds-typography>
 
             <dap-ds-modal id="tray-bottom">
                 <dap-ds-typography variant="h1" slot="title">Form sent succesful</dap-ds-typography>
@@ -123,4 +126,5 @@
 
         </dap-ds-stack>
     </form>
-</div>
+</dap-ds-card-content>
+</dap-ds-card>

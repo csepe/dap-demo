@@ -1,0 +1,4 @@
+<dap-ds-stack direction="row">
+    <dap-ds-switch label="Dark" (dds-change)="setTheme($event.detail['checked'] ? ThemeEnum.DARK : ThemeEnum.LIGHT);"></dap-ds-switch>
+    <dap-ds-switch label="HC" (dds-change)="setTheme($event.detail['checked'] ? ThemeEnum.HC : previousTheme);"></dap-ds-switch>
+</dap-ds-stack>
