@@ -1,11 +1,12 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { DapDSInputValueAccessorDirective } from '../../directives/dap-ds-input.directive';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, DapDSInputValueAccessorDirective],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
@@ -57,7 +58,9 @@ export class FormComponent {
   }
 
   submitForm(form: FormGroup): void {
-    console.log(form.value);
+    if (form.valid) {
+      console.log(form.value);
+    }
   }
 
   setFormValue(name: string, event: CustomEvent): void {
