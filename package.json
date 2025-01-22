@@ -6,7 +6,8 @@
     "start": "nvm use v22.11.0 && ng serve -o",
     "build": "nvm use v22.11.0 && ng build --configuration production --base-href /dap-demo/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dap-ds-update": "nvm use v22.11.0 && npm install dap-design-system@latest"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +19,7 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
-    "dap-design-system": "^0.16.2",
+    "dap-design-system": "^0.18.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
