@@ -4,12 +4,11 @@ import { CommonModule } from '@angular/common';
 import { DapDSInputValueAccessorDirective } from '../../directives/dap-ds-input.directive';
 
 @Component({
-  selector: 'app-form',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, DapDSInputValueAccessorDirective],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './form.component.html',
-  styleUrl: './form.component.scss'
+    selector: 'app-form',
+    imports: [CommonModule, ReactiveFormsModule, DapDSInputValueAccessorDirective],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    templateUrl: './form.component.html',
+    styleUrl: './form.component.scss'
 })
 export class FormComponent {
   form: FormGroup;

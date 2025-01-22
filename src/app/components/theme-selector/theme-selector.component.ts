@@ -8,12 +8,11 @@ export enum ThemeEnum {
 }
 
 @Component({
-  selector: 'app-theme-selector',
-  standalone: true,
-  imports: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './theme-selector.component.html',
-  styleUrl: './theme-selector.component.scss'
+    selector: 'app-theme-selector',
+    imports: [],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    templateUrl: './theme-selector.component.html',
+    styleUrl: './theme-selector.component.scss'
 })
 export class ThemeSelectorComponent implements OnInit {
   currentTheme: ThemeEnum = ThemeEnum.LIGHT;
