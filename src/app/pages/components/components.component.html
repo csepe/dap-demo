@@ -2,7 +2,7 @@
 <div class="demo-app">
   <dap-ds-card>
     <dap-ds-card-content>
-    <dap-ds-typography variant="{{variant}}" class="doc-heading doc-h1">DAP - Components list</dap-ds-typography>
+    <dap-ds-typography variant="h1" class="doc-heading doc-h1">DAP - Components list</dap-ds-typography>
     
     <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3" id="accordion">Accordion</dap-ds-typography>
     <div>
@@ -19,6 +19,15 @@
           </dap-ds-typography>
       </dap-ds-accordion>
     </div>
+
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3" id="avatar">Avatar</dap-ds-typography>
+    <dap-ds-stack direction="row">
+      <dap-ds-avatar size="lg" src="https://services.gov.hu/img/components/apples.webp"></dap-ds-avatar>
+      <dap-ds-avatar size="md" src="https://services.gov.hu/img/components/apples.webp"></dap-ds-avatar>
+      <dap-ds-avatar size="sm" src="https://services.gov.hu/img/components/apples.webp"></dap-ds-avatar>
+      <dap-ds-avatar size="xs" src="https://services.gov.hu/img/components/apples.webp"></dap-ds-avatar>
+      <dap-ds-avatar size="xxs" src="https://services.gov.hu/img/components/apples.webp"></dap-ds-avatar>
+    </dap-ds-stack>
     
     
     <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Badge</dap-ds-typography>
@@ -221,6 +230,43 @@
       <dap-ds-content-switcher-item value="option2">Option 2</dap-ds-content-switcher-item>
       <dap-ds-content-switcher-item value="option3">Option 3</dap-ds-content-switcher-item>
     </dap-ds-content-switcher>
+
+    <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Copybox input</dap-ds-typography>
+    <dap-ds-stack>
+      <dap-ds-copybox-input
+        label="Xs Name"
+        size="xs"
+        feedback="This is a feedback message"
+        feedbacktype="negative"
+        placeholder="Enter your name">
+      </dap-ds-copybox-input>
+      <dap-ds-copybox-input
+        label="Sm Name"
+        size="sm"
+        feedback="This is a feedback message"
+        feedbacktype="negative"
+        placeholder="Enter your name">
+      </dap-ds-copybox-input>
+      <dap-ds-copybox-input
+        label="Lg Name"
+        size="lg"
+        feedback="This is a feedback message"
+        feedbacktype="negative"
+        placeholder="Enter your name">
+      </dap-ds-copybox-input>
+      </dap-ds-stack>
+
+
+      <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">DÁP badge</dap-ds-typography>
+      <dap-ds-stack>
+        <dap-ds-dap-badge>
+        </dap-ds-dap-badge>
+        <div [ngStyle]="{'background-color': 'var(--dds-indigo-1000)', 'padding': 10 }">
+          <dap-ds-dap-badge inverted>
+          </dap-ds-dap-badge>
+        </div>
+      </dap-ds-stack>
+
     
     <dap-ds-typography variant="h2" class="gds-anchor doc-heading doc-h3">Datepicker</dap-ds-typography>
     <div style="display: flex;">

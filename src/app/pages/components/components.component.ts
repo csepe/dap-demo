@@ -1,16 +1,21 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-components',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './components.component.html',
   styleUrl: './components.component.scss'
 })
-export class ComponentsComponent {
+export class ComponentsComponent implements OnInit {
 
-  variant = 'h1'
+  constructor() {}
+
+  ngOnInit(): void {
+      
+  }
 
   onDDSInputChanged(event: CustomEvent) {
     console.log(event.detail.value);
